@@ -6,7 +6,7 @@ while working with functions I've worked on Hangman Game. you can find more abou
 
 <br>
 **Thoughts** Python is an interesting language for me. I love to master this programming Language. still have some difficulties with Functional programming in Python.
-
+  
 **Link(s) to work**
 1. [Hang Man Game](https://github.com/KhudadadKhawari/100DaysOfCode/blob/main/hangman.py)
 
