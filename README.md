@@ -8,7 +8,7 @@ My Final Goal is to be in Artificial Intelligence  Field 🤖
 I will Tweet My progress Daily on Twitter.
 Follow me [here](https://twitter.com/khudadadkhawari) <br/>
 Also I will push my code on GitHub.
-You can check my progress on GitHub [here](https://github.com/KhudadadKhawari/100-days-of-code/log.md)
+You can check my progress on GitHub [here](https://github.com/KhudadadKhawari/100-days-of-code/blob/master/log.md)
 
 ## Website and Social Links
 **Website**:
