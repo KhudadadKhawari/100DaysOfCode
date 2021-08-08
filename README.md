@@ -1,16 +1,16 @@
 # 100DaysOfCode
-##Intro
+## Intro
 I'm going through **#100DaysOfCode Challenge**. In the next 100 Days I've planed to Master Python Programming Language by learning and working with multiple Frameworks. Also, During these 100 days I will Read books, blogs and watch tutorials on YouTube, Udemy, Edx, FreeCodeCamp related to my goals.
 I will do many Coding Challenges and work on Multiple basic and advanced Projects.👨‍💻
 My Final Goal is to be in Artificial Intelligence  Field 🤖
 
-##Progress 
+## Progress 
 I will Tweet My progress Daily on Twitter.
 Follow me [here](https://twitter.com/khudadadkhawari) <br/>
 Also I will push my code on GitHub.
 You can check my progress on GitHub [here](https://github.com/KhudadadKhawari/100-days-of-code/blob/master/log.md)
 
-##Website and Social Links
+## Website and Social Links
 **Website**:
 www.SeferYak.com
 
