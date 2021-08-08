@@ -8,4 +8,4 @@
 1. [NotUpdatedYet](https://www.seferyak.com)
 
 ## Progress:
-You can check my progress [here](https://github.com/KhudadadKhawari/100-days-of-code/log.md)
+You can check my progress [here](https://github.com/KhudadadKhawari/100-days-of-code/blob/master/log.md)
