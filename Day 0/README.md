@@ -7,5 +7,5 @@
 **Link(s) to work**
 1. [NotUpdatedYet](https://www.seferyak.com)
 
-##Progress:
+## Progress:
 You can check my progress [here](https://github.com/KhudadadKhawari/100-days-of-code/edit/master/log.md)
