@@ -1,4 +1,4 @@
-#Day 0: August 8, Sunday
+# Day 0: August 8, Sunday
 
 **Today's Progress**: I've reviewed basic syntax in python. practiced with functional programming and Object oriented programming in python.
 
