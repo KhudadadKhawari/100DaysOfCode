@@ -1,4 +1,4 @@
-# Day 1: August 11
+# Day 3: August 11
 
 **Today's Progress**: Today I solved some Coding Challenges on SoloLearn App. Also watched some Tutorials online. I also worked on this Caesar Cipher program. if You need a description about Caesar Cipher Click [HERE](https://en.wikipedia.org/wiki/Caesar_cipher)
 <br>
