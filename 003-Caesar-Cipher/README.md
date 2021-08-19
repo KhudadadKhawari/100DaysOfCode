@@ -6,7 +6,7 @@
 **Thoughts** I'm having a hard time both preparing for exam and completing coding challenges. Anyway I will never give up.
   
 **Link(s) to work**
-1. [Caesar-Cipher](https://github.com/KhudadadKhawari/100DaysOfCode/blob/main/Day-3/caesar-cipher.py)
+1. [Caesar-Cipher](https://github.com/KhudadadKhawari/100DaysOfCode/blob/main/003-Caesar-Cipher/caesar-cipher.py)
 
 ## Progress:
 You can check my progress [here](https://github.com/KhudadadKhawari/100-days-of-code/blob/master/log.md)
