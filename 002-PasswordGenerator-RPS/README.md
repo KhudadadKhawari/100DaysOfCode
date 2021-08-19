@@ -5,7 +5,7 @@ Three Basic rules of RPS
 2. Scissors win against paper
 3. Paper wins against rock
 <br>
-To know more about the Rock-Paper-Scissors Game Check [here](https://wrpsa.com/the-official-rules-of-rock-paper-scissors/)
+To know more about the Rock-Paper-Scissors Game Check [here](https://wrpsa.com/the-official-rules-of-rock-paper-scissors/) <br>
 ## description:
 Create a program that gets user input for choosing Rock,Paper or Scissors.
 <br>
