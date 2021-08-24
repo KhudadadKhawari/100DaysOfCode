@@ -33,8 +33,6 @@ class Scoreboard(Turtle):
         self.shield -= 1
         self.update_scoreboard()
 
-
-
     def game_over(self):
         self.penup()
         self.hideturtle()

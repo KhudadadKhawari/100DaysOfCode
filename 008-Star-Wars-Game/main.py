@@ -41,7 +41,6 @@ scr.onkey(player.turn_left,'Left')
 scr.onkey(player.turn_right,'Right')
 scr.onkey(fire_missile,'space')
 
-
 game_is_on = True
 while game_is_on:
     time.sleep(0.1)

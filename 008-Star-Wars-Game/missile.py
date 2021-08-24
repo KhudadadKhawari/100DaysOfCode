@@ -23,6 +23,7 @@ class Missile:
                 missile.setheading(heading)
                 missile.state = 'fire'
                 break
+
     def return_missiles(self):
         return_missiles = []
         for missile in self.missiles:
