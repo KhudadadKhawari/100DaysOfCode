@@ -10,7 +10,7 @@ class Missile:
         new_missile = Turtle('circle')
         new_missile.shapesize(20)
         new_missile.color('yellow')
-        new_missile.speed = 1
+        new_missile.speed = 5
         new_missile.state = 'ready'
         new_missile.hideturtle()
         self.missiles.append(new_missile)

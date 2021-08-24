@@ -23,9 +23,8 @@ class Alien:
 
     def move_aliens(self):
         for alien in self.aliens:
-            print(alien.position())
             if alien.xcor() > 280 or alien.xcor() < -280 or alien.ycor() > 280 or alien.ycor() < -280 :
                 alien.setheading(alien.towards(0,0))
             if alien.position() != (1000.0,1000.0):
-                alien.forward(alien.speed())
-
+                alien.forward(self.moving_speed)
+            print(self.moving_speed)
