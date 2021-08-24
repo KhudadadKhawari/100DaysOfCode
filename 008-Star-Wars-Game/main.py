@@ -2,7 +2,7 @@ from turtle import  Screen
 import  time, random
 from player import  Player
 from aliens import  Alien
-# from missile import  Missile
+from scoreboard import  Scoreboard
 
 scr = Screen()
 scr.setup(600,600)
@@ -11,11 +11,7 @@ scr.tracer(0)
 
 player = Player()
 alien = Alien()
-# missile = Missile()
-
-# def shoot_the_target():
-#     player_heading = player.player_heading()
-#     missile.fire_missile(player_heading)
+scoreboard = Scoreboard()
 
 from turtle import  Turtle
 missile = Turtle()
@@ -23,11 +19,12 @@ missiles = []
 for _ in range(3):
     missile.color("yellow")
     missile.shape("circle")
-    missile.shapesize(0.5)
+    missile.shapesize(stretch_len=1, stretch_wid=1)
     missile.penup()
     missile.speed = 15
     missile.state = "ready"
     missile.hideturtle()
+    missile.goto(1000,1000)
     missiles.append(missile)
 
 def fire_missile():
@@ -59,10 +56,19 @@ while game_is_on:
         if missile.state == 'fire':
             missile.forward(missile.speed)
             for current_alien in alien.aliens:
+                if current_alien.distance(player) < 10:
+                    current_alien.goto(1000,1000)
+                    current_alien.forward(0)
+                    if scoreboard.shield > 0:
+                        scoreboard.decrease_shield_level()
+                    else:
+                        scoreboard.game_over()
+                        game_is_on = False
                 if missile.distance(current_alien) < 20:
-                    missile.hideturtle()
+                    missile.goto(2000,2000)
+                    current_alien.goto(1000,1000)
                     missile.state = 'ready'
-                    current_alien.hideturtle()
+                    scoreboard.increase_score_and_level()
         if missile.xcor() > 280 or missile.xcor() < -280 or missile.ycor() > 280 or missile.ycor() < -280:
             missile.hideturtle()
             missile.state = 'ready'

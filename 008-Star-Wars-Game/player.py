@@ -17,6 +17,7 @@ class Player(Turtle):
         self.color('blue')
         self.shape('arrow')
         self.shapesize(stretch_wid=1, stretch_len=3)
+        self.setposition(0,0)
 
 
     def player_heading(self):
