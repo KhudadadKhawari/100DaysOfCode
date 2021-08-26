@@ -15,8 +15,21 @@ class Scoreboard(Turtle):
 
     # Displaying the Game Over text, get a parameter even the snake collided with it's tail or the walls
     def game_over(self, param):
+        best_score = 0
+        try:
+            with open('best_score.txt','r') as file:
+                old_best_score = int(file.read())
+                if old_best_score < self.score:
+                    best_score = self.score
+                else:
+                    best_score = old_best_score
+        except FileNotFoundError:
+            with open('best_score.txt','w') as file:
+                file.write(str(self.score))
+                best_score = self.score
+
         self.goto(0, 0)
-        self.write(f"GAME OVER! \n{param}", align=ALIGNMENT, font=FONT)
+        self.write(f"GAME OVER! \n{param}\nCurrent Score: {self.score}\nBest Score: {best_score}", align=ALIGNMENT, font=FONT)
 
     #updating the scoreboard text frequently
     def update_scoreboard(self):
