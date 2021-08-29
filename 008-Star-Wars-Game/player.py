@@ -7,10 +7,7 @@ class Player(Turtle):
     def __init__(self):
         super().__init__()
         self.moving_speed = PLAYER_STARTING_SPEED
-        self.missiles = []
-        self.missiles_count = 50
         self.create_player()
-        # self.create_missile()
 
     def create_player(self):
         self.penup()
