@@ -2,7 +2,21 @@ from tkinter import *
 from tkinter import messagebox
 import random
 import pyperclip
+import json
 
+
+#---------------------------Search Data-----------------------------#
+def search():
+    try:
+        with open('passwords.json', 'r') as file:
+            data = json.load(file)
+            try:
+                search_result = data[website.get()]
+                messagebox.showinfo(title=website.get(), message=f"Email: {search_result['email']} \nPassword: {search_result['password']}")
+            except KeyError:
+                messagebox.showinfo(title='Not Found', message=f"No data Found for {website.get()}")
+    except FileNotFoundError:
+        messagebox.showerror(title="File Not Found", message="Please Make sure the data [passords.json] File does exist on current directory")
 #---------------------------Password Generator----------------------#
 def generate_random_password():
 
@@ -31,20 +45,38 @@ def generate_random_password():
 #---------------------------Save Password---------------------------#
 
 def add_password():
+    new_data = {
+        website.get(): {
+            "email": email_username.get(),
+            "password": password_entry.get(),
+        }
+    }
+
     if not website.get() or not email_username.get() or not password_entry.get():
         messagebox.showerror(title="empty fillds", message="Website/Email/Passowrd fields can't be empty")
     else:
-        password_info = f"{website.get()} | {email_username.get()} | {password_entry.get()} \n"
+        # password_info = f"{website.get()} | {email_username.get()} | {password_entry.get()} \n"
         user_confirm = messagebox.askokcancel(title=website.get(), message=f"Entered details:\nEmail: {email_username.get()}"
         f"\nPassword: {password_entry.get()} \nClick OK to Save" )
 
         if user_confirm:
 
-            with open('passwords.txt', 'a') as file:
-                file.write(password_info)
-                website.delete(0,END)
-                email_username.delete(0,END)
-                password_entry.delete(0,END)
+            # with open('passwords.txt', 'a') as file:
+            #     file.write(password_info)
+            #     website.delete(0,END)
+
+            try:
+                with open('passwords.json', 'r') as data_file:
+                    data = json.load(data_file)
+                    data.update(new_data)
+            except FileNotFoundError:
+                data = new_data
+            finally:
+                with open('passwords.json','w') as data_file:
+                    json.dump(data,data_file, indent=4)
+
+                    email_username.delete(0,END)
+                    password_entry.delete(0,END)
 
 
 #---------------------------UI Setup--------------------------------#
@@ -60,9 +92,12 @@ canva.grid(row=0, column=1)
 
 website_lb = Label(text="Website:")
 website_lb.grid(row = 1, column = 0)
-website = Entry(width=40)
-website.grid(row=1, column=1, columnspan=2)
+website = Entry(width=21)
+website.grid(row=1, column=1 )
 website.focus()
+search_btn = Button(text="Search", command = search)
+search_btn.grid(row=1, column=2)
+
 
 email_username_lb = Label(text="Email/Username:")
 email_username_lb.grid(row = 2, column = 0)
