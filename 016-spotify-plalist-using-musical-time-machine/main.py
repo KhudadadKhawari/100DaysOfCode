@@ -6,8 +6,8 @@ import spotipy
 BILLBOARD_ENDPOINT = "https://www.billboard.com/charts/hot-100" # this code is scrapping this website for getting the top 100 songs list
 
 # Copy These from Spotify, You will have to login as a developer and create a new app
-CLIENT_ID = "c02e3599cf3e4a7d83685669124faded"
-CLIENT_SECRET = "86e21e430e4f4f388b9d4157b582af8e"
+CLIENT_ID = "COPY IT FROM YOUR SPOTIFY ACC"
+CLIENT_SECRET = "COPY FROM YOUR SPOTIFY ACC"
 REDIRECT_URI = "http://example.com"
 
 scope = "playlist-modify-public"  # if you change the scope then it will ask again for the redirected url which u will have to copy and paste form your browser
@@ -20,8 +20,8 @@ current_user = sp.current_user()
 user_id = current_user["id"]
 
 # Get the YYYY-MM-DD from user
-# date = input("Enter a Date with this format(YYYY-MM-DD) Ex. (2021-09-03): ")
-date = "2021-09-03"
+date = input("Enter a Date with this format(YYYY-MM-DD) Ex. (2021-09-03): ")
+# date = "2021-09-03"
 
 url = f"{BILLBOARD_ENDPOINT}/{date}"
 html_doc = requests.get(url=url).text
