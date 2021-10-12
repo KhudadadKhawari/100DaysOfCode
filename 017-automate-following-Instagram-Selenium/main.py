@@ -18,9 +18,9 @@ driver.get(url)
 time.sleep(4)
 
 username = driver.find_element_by_name("username")
-username.send_keys(username)
+username.send_keys(USERNAME)
 password = driver.find_element_by_name("password")
-password.send_keys(password)
+password.send_keys(PASSWORD)
 
 login_btn = driver.find_element_by_xpath('//*[@id="loginForm"]/div/div[3]/button')
 login_btn.click()
